@@ -30,7 +30,9 @@ console.log('Js ok');
 
 // Fase preparatoria
 let discount;
-let message;
+let message = "";
+let finalMessage;
+const resultElement = document.getElementById('result');
 // Fase di raccolta dati
 const kmChoice = parseInt(prompt("Quanti kilometri vorresti percorrere?", "10"));
 const age =prompt("Quanti anni hai?", "17");
@@ -44,15 +46,18 @@ let ticketPrice = (0.21 * kmChoice);
 if (age > 65 ) {
     // sconto del 40%
     discount = 0.4;
+    message = ("Complimenti! Hai diritto ad uno socnto del 40%");
 }else if ( age < 18 ){
     // socnto del 20%
     discount = 0.2;
+    message = ("Complimenti! Hai diritto ad uno sconto del 20%");
 } else {
     // prezzo full
     discount = 0;
 }
 // mi serve il risultato con due decimali
 let finalPrice = (ticketPrice * (1 - discount)).toFixed(2) + " €";
-console.log(finalPrice);
-
 // Fase di preparazione output
+finalMessage = `Il prezzo finale del tuo biglietto è ${finalPrice}`;
+console.log(message , finalMessage);
+resultElement.innerHTML = message + "<br>"+ finalMessage;
