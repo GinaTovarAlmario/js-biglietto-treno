@@ -39,25 +39,31 @@ const age =prompt("Quanti anni hai?", "17");
 
 console.log(kmChoice);
 console.log(age);
+// Validazione
+if ( isNaN(kmChoice) || isNaN(age)){
+    alert ('Non hai inserito un  numero! Ricarica la pagina!');
 
-// Fase di lavorazione dati
-let ticketPrice = (0.21 * kmChoice);
+} else { 
+    // Fase di lavorazione dati
+    let ticketPrice = (0.21 * kmChoice);
 
-if (age > 65 ) {
+    if (age > 65 ) {
     // sconto del 40%
-    discount = 0.4;
-    message = ("Complimenti! Hai diritto ad uno socnto del 40%");
-}else if ( age < 18 ){
+        discount = 0.4;
+        message = ("Complimenti! Hai diritto ad uno socnto del 40%");
+    }else if ( age < 18 ){
     // socnto del 20%
-    discount = 0.2;
-    message = ("Complimenti! Hai diritto ad uno sconto del 20%");
-} else {
+        discount = 0.2;
+        message = ("Complimenti! Hai diritto ad uno sconto del 20%");
+    } else {
     // prezzo full
-    discount = 0;
-}
+        discount = 0;
+    }
 // mi serve il risultato con due decimali
-let finalPrice = (ticketPrice * (1 - discount)).toFixed(2) + " €";
+    let finalPrice = (ticketPrice * (1 - discount)).toFixed(2) + " €";
 // Fase di preparazione output
-finalMessage = `Il prezzo finale del tuo biglietto è ${finalPrice}`;
-console.log(message , finalMessage);
-resultElement.innerHTML = message + "<br>"+ finalMessage;
+    finalMessage = `Il prezzo finale del tuo biglietto è ${finalPrice}`;
+    console.log(message , finalMessage);
+    resultElement.innerHTML = message + "<br>"+ finalMessage;
+    }
+
