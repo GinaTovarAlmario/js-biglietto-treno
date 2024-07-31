@@ -43,7 +43,10 @@ console.log(age);
 if ( isNaN(kmChoice) || isNaN(age)){
     alert ('Non hai inserito un  numero! Ricarica la pagina!');
 
-} else { 
+} else if (kmChoice < 0 || age <0 ) {
+    alert('Hai inserito un numero negativo! Ricarica la pagina!')
+
+} else {
     // Fase di lavorazione dati
     let ticketPrice = (0.21 * kmChoice);
 
@@ -65,5 +68,5 @@ if ( isNaN(kmChoice) || isNaN(age)){
     finalMessage = `Il prezzo finale del tuo biglietto è ${finalPrice}`;
     console.log(message , finalMessage);
     resultElement.innerHTML = message + "<br>"+ finalMessage;
-    }
+}
 
