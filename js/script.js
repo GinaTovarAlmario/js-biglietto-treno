@@ -14,3 +14,22 @@ Bonus
 2.Aggiungere, sempre in pagina, altre informazioni, come il prezzo prima dello sconto e l'età e il chilometraggio indicati dall'utente
 3.Abbellire col CSS
 */
+
+/*
+1 Definisco una variabile x a cui verrà attribuito i km dati dall'utente
+2 Definisco una variabile che mi calcola il prezzo per km
+3 Chiedo all'utente il numero di km che vorrebbe percorrere
+4 Chiedo l'età all'utente
+5 Controllo se utente ha diritto ad uno sconto
+    in base all'età
+5 Calcolo il prezzo del viaggio tenendo conto dell'eventuale sconto
+6- Stampo il risultato
+*/
+
+// Fase preparatoria
+
+// Fase di raccolta dati
+
+// Fase di lavorazione dati
+
+// Fase di preparazione output
