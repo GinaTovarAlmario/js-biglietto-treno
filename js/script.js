@@ -25,10 +25,15 @@ Bonus
 5 Calcolo il prezzo del viaggio tenendo conto dell'eventuale sconto
 6- Stampo il risultato
 */
+// primo controllo i collegamenti
+console.log('Js ok');
 
 // Fase preparatoria
 
+
+
 // Fase di raccolta dati
+
 
 // Fase di lavorazione dati
 
