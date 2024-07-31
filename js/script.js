@@ -16,7 +16,7 @@ Bonus
 */
 
 /*
-1 Definisco una variabile x a cui verrà attribuito i km dati dall'utente
+1 Definisco una variabile per lo sconto
 2 Definisco una variabile che mi calcola il prezzo per km
 3 Chiedo all'utente il numero di km che vorrebbe percorrere
 4 Chiedo l'età all'utente
@@ -29,12 +29,28 @@ Bonus
 console.log('Js ok');
 
 // Fase preparatoria
-
-
-
+let discount;
 // Fase di raccolta dati
+const kmChoice = parseInt(prompt("Quanti kilometri vorresti percorrere?", "10"));
+const age =prompt("Quanti anni hai?", "17");
 
+console.log(kmChoice);
+console.log(age);
 
 // Fase di lavorazione dati
+let ticketPrice = (0.21 * kmChoice);
+
+if (age > 65 ) {
+    // sconto del 40%
+    discount = 0.4;
+}else if ( age < 18 ){
+    // socnto del 20%
+    discount = 0.2;
+} else {
+    // prezzo full
+    discount = 0;
+}
+let finalPrice = ticketPrice * (1 - discount);
+console.log(finalPrice);
 
 // Fase di preparazione output
