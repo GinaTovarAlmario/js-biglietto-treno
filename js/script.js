@@ -30,6 +30,7 @@ console.log('Js ok');
 
 // Fase preparatoria
 let discount;
+let message;
 // Fase di raccolta dati
 const kmChoice = parseInt(prompt("Quanti kilometri vorresti percorrere?", "10"));
 const age =prompt("Quanti anni hai?", "17");
@@ -50,7 +51,8 @@ if (age > 65 ) {
     // prezzo full
     discount = 0;
 }
-let finalPrice = ticketPrice * (1 - discount);
+// mi serve il risultato con due decimali
+let finalPrice = (ticketPrice * (1 - discount)).toFixed(2) + " €";
 console.log(finalPrice);
 
 // Fase di preparazione output
