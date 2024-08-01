@@ -29,7 +29,7 @@ Bonus
 console.log('Js ok');
 
 // Fase preparatoria
-let discount;
+let discount = null;
 let message = "";
 let finalMessage;
 const resultElement = document.getElementById('result');
@@ -43,14 +43,14 @@ console.log(age);
 if ( isNaN(kmChoice) || isNaN(age)){
     alert ('Non hai inserito un  numero! Ricarica la pagina!');
 
-} else if (kmChoice < 0 || age <0 ) {
+} else if (kmChoice <= 0 || age <= 0 ) {
     alert('Hai inserito un numero negativo! Ricarica la pagina!')
 
 } else {
     // Fase di lavorazione dati
     let ticketPrice = (0.21 * kmChoice);
 
-    if (age > 65 ) {
+    if (age >= 65 ) {
     // sconto del 40%
         discount = 0.4;
         message = ("Complimenti! Hai diritto ad uno socnto del 40%");
